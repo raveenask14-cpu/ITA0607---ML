@@ -1,0 +1,152 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MFynkkP-v4P5",
+        "outputId": "30dab47d-900c-4d5b-e863-3f9e84b58fc5"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Input Values:\n",
+            "[-3 -2 -1  0  1  2  3]\n",
+            "\n",
+            "Tanh Output:\n",
+            "[-0.99505475 -0.96402758 -0.76159416  0.          0.76159416  0.96402758\n",
+            "  0.99505475]\n"
+          ]
+        }
+      ],
+      "source": [
+        "import numpy as np\n",
+        "# Input values\n",
+        "x = np.array([-3, -2, -1, 0, 1, 2, 3])\n",
+        "# Apply Tanh activation function\n",
+        "output = np.tanh(x)\n",
+        "print(\"Input Values:\")\n",
+        "print(x)\n",
+        "print(\"\\nTanh Output:\")\n",
+        "print(output)\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "# Input values\n",
+        "x = np.array([-5, -2, 0, 3, 7])\n",
+        "# Apply ReLU activation function\n",
+        "relu_output = np.maximum(0, x)\n",
+        "print(\"Input Values:\")\n",
+        "print(x)\n",
+        "print(\"\\nReLU Output:\")\n",
+        "print(relu_output)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lfsPZdKdwIcx",
+        "outputId": "f7873d44-3662-46a5-cedb-157b9bd67ab7"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Input Values:\n",
+            "[-5 -2  0  3  7]\n",
+            "\n",
+            "ReLU Output:\n",
+            "[0 0 0 3 7]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "# Input values\n",
+        "x = np.array([-5, -2, 0, 2, 5])\n",
+        "# Apply Sigmoid activation function\n",
+        "sigmoid_output = 1 / (1 + np.exp(-x))\n",
+        "print(\"Input Values:\")\n",
+        "print(x)\n",
+        "print(\"\\nSigmoid Output:\")\n",
+        "print(sigmoid_output)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VZKTXE5xwhAR",
+        "outputId": "26ebef7a-ce42-4b6f-9b77-acde89edc083"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Input Values:\n",
+            "[-5 -2  0  2  5]\n",
+            "\n",
+            "Sigmoid Output:\n",
+            "[0.00669285 0.11920292 0.5        0.88079708 0.99330715]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "marks = np.array([85, 70, 60])\n",
+        "softmax = np.exp(marks) / np.sum(np.exp(marks))\n",
+        "print(\"Scores :\", marks)\n",
+        "print(\"Softmax:\", softmax)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YYIE60qdwiR6",
+        "outputId": "b44b4482-aac5-4415-b0af-64c8e5652091"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Scores : [85 70 60]\n",
+            "Softmax: [9.99999694e-01 3.05902227e-07 1.38879396e-11]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
